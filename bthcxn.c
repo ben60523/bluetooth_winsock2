@@ -824,7 +824,7 @@ void ShowCmdLineHelp(void)
 		L"\n                          The address is in form XX:XX:XX:XX:XX:XX"
 		L"\n                          where XX is a hexidecimal byte"
 		L"\n"
-		L"\n                          One of the above two switches is required for client."
+		L"\n                          One of the above two switches is reqquired for client."
 		L"\n"
 		L"\n"
 		L"\n  Switches applicable for both Client and Server mode:"
