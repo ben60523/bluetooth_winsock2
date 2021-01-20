@@ -1,0 +1,74 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Build for x86_64",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-g",
+				"${workspaceFolder}/*.c",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/gcc"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Build for gnueabi",
+			"command": "/usr/bin/arm-linux-gnueabi-gcc",
+			"args": [
+				"-fPIC",
+				"-shared",
+				"-g",
+				"${workspaceFolder}/*.c",
+				"-o",
+				"${fileDirname}/libmedicam-gnueabi.so"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Build for WIN32",
+			"command": "script\\build.bat",
+			"args": [
+				"/D_USRDLL", 
+				"/D_WINDLL", 
+				"${workspaceFolder}\\*.c*",
+				"/MT",
+				"/link", "ws2_32.lib",
+				"/OUT:bt_sample.exe"
+			  ],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+		}
+	]
+}
