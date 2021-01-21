@@ -1,4 +1,3 @@
-*.vcxproj
 Debug
 *.vcxproj.user
 *.exe
