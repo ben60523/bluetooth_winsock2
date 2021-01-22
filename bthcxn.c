@@ -74,17 +74,6 @@ int main(int argc, char** args)
 				printf("BluetoothGetRadioInfo() looks fine!\n");
 			else
 				printf("BluetoothGetRadioInfo() failed wit herror code %d\n", mbtinfo_ret);
-
-			wprintf(L"Radio %d:\r\n", m_radio_id);
-			wprintf(L"\tInstance Name: %s\r\n", m_bt_info.szName);
-			wprintf(L"\tAddress: %02X:%02X:%02X:%02X:%02X:%02X\r\n",
-				m_bt_info.address.rgBytes[5],
-				m_bt_info.address.rgBytes[4],
-				m_bt_info.address.rgBytes[3],
-				m_bt_info.address.rgBytes[2],
-				m_bt_info.address.rgBytes[1],
-				m_bt_info.address.rgBytes[0]
-			);
 			//wprintf(L"\tClass: 0x%08x\r\n", m_bt_info.ulClassofDevice);
 			//wprintf(L"\tManufacturer: 0x%04x\r\n", m_bt_info.manufacturer);
 
